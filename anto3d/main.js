@@ -21,11 +21,13 @@ renderer.render(scene, camera);
 
 // Torus
 
-const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
+const geometry = new THREE.TorusGeometry(5, 0.5, 16, 100);
+const material = new THREE.MeshStandardMaterial({ color: 0x006866  });
 const torus = new THREE.Mesh(geometry, material);
 
 scene.add(torus);
+
+
 
 // Lights
 
@@ -67,7 +69,7 @@ scene.background = spaceTexture;
 
 const dianciTexture = new THREE.TextureLoader().load('dianci.png');
 
-const dianci = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: dianciTexture }));
+const dianci = new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), new THREE.MeshBasicMaterial({ map: dianciTexture }));
 
 scene.add(dianci);
 
@@ -89,7 +91,7 @@ scene.add(moon);
 moon.position.z = 30;
 moon.position.setX(-10);
 
-dianci.position.z = -5;
+dianci.position.z = -2;
 dianci.position.x = 2;
 
 // Scroll Animation
@@ -116,8 +118,8 @@ moveCamera();
 function animate() {
   requestAnimationFrame(animate);
 
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.005;
+  torus.rotation.x += 0.001;
+  torus.rotation.y += 0.01;
   torus.rotation.z += 0.01;
 
   moon.rotation.x += 0.005;
