@@ -62,12 +62,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('images/space.jpeg');
 scene.background = spaceTexture;
 
 // Avatar
 
-const dianciTexture = new THREE.TextureLoader().load('dianci.png');
+const dianciTexture = new THREE.TextureLoader().load('images/dianci.png');
 
 const dianci = new THREE.Mesh(new THREE.BoxGeometry(2, 2, 2), new THREE.MeshBasicMaterial({ map: dianciTexture }));
 
@@ -75,8 +75,8 @@ scene.add(dianci);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('images/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('images/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
